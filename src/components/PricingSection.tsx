@@ -4,39 +4,43 @@ import { QuoteFormDialog } from "@/components/QuoteFormDialog"
 
 const pricingTiers = [
   {
-    name: "Базовый",
-    price: "99 900",
+    name: "Маленькие",
+    price: "350",
+    unit: "кг",
     features: [
-      "До 5 страниц",
-      "Адаптивный дизайн",
-      "Базовая SEO-оптимизация",
-      "Форма обратной связи",
-      "1 месяц поддержки",
+      "Размер: 4–6 см",
+      "Живые или варёные",
+      "Минимальный заказ: 1 кг",
+      "Доставка в день заказа",
+      "Упаковка включена",
     ],
     highlighted: false,
   },
   {
-    name: "Про",
-    price: "249 900",
+    name: "Средние",
+    price: "550",
+    unit: "кг",
     features: [
-      "До 15 страниц",
-      "Премиум-дизайн",
-      "Расширенная SEO-оптимизация",
-      "Интеграция CMS",
-      "Функционал e-commerce",
-      "3 месяца поддержки",
+      "Размер: 7–9 см",
+      "Живые или варёные",
+      "Минимальный заказ: 1 кг",
+      "Доставка в день заказа",
+      "Упаковка включена",
+      "Самый популярный размер",
     ],
     highlighted: true,
   },
   {
-    name: "Индивидуальный",
-    price: "По запросу",
+    name: "Крупные",
+    price: "800",
+    unit: "кг",
     features: [
-      "Неограниченно страниц",
-      "Кастомный функционал",
-      "API-интеграции",
-      "Персональный менеджер",
-      "6 месяцев поддержки",
+      "Размер: 10+ см",
+      "Живые или варёные",
+      "Минимальный заказ: 1 кг",
+      "Доставка в день заказа",
+      "Упаковка включена",
+      "Максимум мяса",
     ],
     highlighted: false,
   },
@@ -57,13 +61,13 @@ export function PricingSection() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            Прозрачные цены
+            Честные цены
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance">
-            Выберите <span className="text-primary">идеальный тариф</span> для вашего проекта
+            Выберите <span className="text-primary">нужный размер</span> раков
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            От стартапов до крупного бизнеса — у нас есть подходящее решение
+            Чем крупнее — тем мяснистее и вкуснее. Цена за 1 кг
           </p>
         </div>
 
@@ -86,15 +90,8 @@ export function PricingSection() {
                 <CardTitle className="text-2xl mb-2">{tier.name}</CardTitle>
                 <div className="mt-4">
                   <span className="text-4xl font-bold">
-                    {tier.price === "По запросу" ? (
-                      <span className="text-3xl">{tier.price}</span>
-                    ) : (
-                      <>
-                        <span className="text-lg font-normal text-muted-foreground">от </span>
-                        {tier.price}
-                        <span className="text-lg font-normal text-muted-foreground"> ₽</span>
-                      </>
-                    )}
+                    {tier.price}
+                    <span className="text-lg font-normal text-muted-foreground"> ₽/кг</span>
                   </span>
                 </div>
               </CardHeader>
@@ -112,7 +109,7 @@ export function PricingSection() {
                   variant={tier.highlighted ? "default" : "outline"}
                   className={`w-full ${tier.highlighted ? "shadow-lg shadow-primary/20" : ""}`}
                 >
-                  {tier.price === "По запросу" ? "Связаться с нами" : "Выбрать тариф"}
+                  Заказать
                 </QuoteFormDialog>
               </CardContent>
             </Card>
@@ -121,8 +118,8 @@ export function PricingSection() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            Все тарифы включают <span className="text-primary font-semibold">бесплатную настройку хостинга</span> и{" "}
-            <span className="text-primary font-semibold">SSL-сертификат</span>
+            Доставка <span className="text-primary font-semibold">бесплатно</span> при заказе от{" "}
+            <span className="text-primary font-semibold">3 кг</span>
           </p>
         </div>
       </div>

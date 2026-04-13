@@ -2,19 +2,19 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, Sparkles } from "lucide-react"
 
 const values = [
-  { title: "Качество", description: "Высококлассные решения, соответствующие самым высоким стандартам" },
-  { title: "Доступность", description: "Профессиональные сайты по честным и прозрачным ценам" },
-  { title: "Прозрачность", description: "Четкая коммуникация без скрытых платежей" },
-  { title: "Клиентоориентированность", description: "Ваши цели и пожелания всегда в приоритете" },
-  { title: "Масштабируемость", description: "Сайты, которые растут вместе с вашим бизнесом" },
-  { title: "Гибкость", description: "Быстрая адаптация под меняющиеся потребности" },
+  { title: "Только свежий продукт", description: "Раки доставляются живыми или только что сваренными — никакой заморозки и вчерашнего товара" },
+  { title: "Честные цены", description: "Цена за килограмм фиксирована, никаких скрытых доплат за упаковку или доставку" },
+  { title: "Быстро и надёжно", description: "Доставляем в день заказа — раки приедут в идеальном состоянии" },
+  { title: "Для вас и бизнеса", description: "Работаем как с частными клиентами, так и с ресторанами и кафе по оптовым ценам" },
+  { title: "Удобный заказ", description: "Оформите заказ через сайт или позвоните — всё просто и без лишних шагов" },
+  { title: "Щедрые порции", description: "Продаём от 1 кг — возьмите ровно столько, сколько нужно на вашу компанию" },
 ]
 
 const stats = [
-  { number: "50+", label: "Проектов" },
-  { number: "45+", label: "Довольных клиентов" },
-  { number: "30+", label: "Созданных логотипов" },
-  { number: "3+", label: "Года опыта" },
+  { number: "2", label: "Вида продукта" },
+  { number: "1 кг", label: "Минимальный заказ" },
+  { number: "В день", label: "Срок доставки" },
+  { number: "5+", label: "Лет на рынке" },
 ]
 
 export function AboutSection() {
@@ -27,19 +27,19 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
             <Sparkles className="h-4 w-4" />
-            О CodeCraft
+            О нас
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Качество, которое{" "}
+            Продукт, которому{" "}
             <span className="text-primary relative">
-              впечатляет
+              доверяют
               <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
                 <path d="M0 4C50 2 150 6 200 4" stroke="currentColor" strokeWidth="2" className="text-primary" />
               </svg>
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Создание сайта не должно быть дорогим. Мы разрабатываем индивидуальные решения, которые идеально соответствуют пожеланиям каждого клиента.
+            Мы поставляем раков уже более 5 лет. За это время тысячи довольных покупателей вернулись к нам снова — потому что знают: у нас всегда свежо, вкусно и честно.
           </p>
         </div>
 
